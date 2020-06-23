@@ -1,5 +1,7 @@
 FROM mrcide/naomi_base:latest
 
+COPY docker/bin /usr/local/bin/
+
 ARG GIT_SHA='UNKNOWN'
 ARG GIT_BRANCH='UNKNOWN'
 ARG NAOMI.CORE_VERSION='UNKNOWN'
