@@ -1,4 +1,4 @@
-# naomi.core
+# naomi.extensions
 
 Core Naomi functionality for use in web app.
 

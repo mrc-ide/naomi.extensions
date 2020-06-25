@@ -6,7 +6,7 @@ HERE=$(dirname $0)
 docker build --pull \
        --build-arg GIT_SHA=$GIT_SHA \
        --build-arg GIT_BRANCH=$GIT_BRANCH \
-       --build-arg NAOMI.CORE_VERSION=$PACKAGE_VERSION \
+       --build-arg NAOMI.EXTENSIONS_VERSION=$PACKAGE_VERSION \
        -t $TAG_SHA \
        -f docker/Dockerfile \
        .

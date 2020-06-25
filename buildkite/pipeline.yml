@@ -15,7 +15,7 @@ steps:
   #    # branch: master # TODO <- set this one back once hintr merged
   #    branch: master
   #    env:
-  #      NAOMI.CORE_SHA: "${BUILDKITE_COMMIT}"
+  #      NAOMI.EXTENSIONS_SHA: "${BUILDKITE_COMMIT}"
 
   - wait
 

@@ -1,4 +1,4 @@
-Package: naomi.core
+Package: naomi.extensions
 Title: Core Naomi model for Subnational HIV Estimates
 Version: 0.0.1
 Authors@R: 

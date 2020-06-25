@@ -1,4 +1,4 @@
 library(testthat)
-library(naomi.core)
+library(naomi.extensions)
 
-test_check("naomi.core")
+test_check("naomi.extensions")
