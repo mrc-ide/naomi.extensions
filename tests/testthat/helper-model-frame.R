@@ -1,0 +1,29 @@
+a_area_merged <- sf::read_sf(system.file("extdata/areas/area_merged.geojson",
+                                         package = "naomi"))
+a_spec <- naomi::extract_pjnz_naomi(system.file("extdata/mwi2019.PJNZ",
+                                                package = "naomi"))
+
+
+a_naomi_mf <- naomi::naomi_model_frame(
+  a_area_merged,
+  mwi_population_agesex,
+  a_spec,
+  scope = "MWI_1_1",
+  level = 4,
+  calendar_quarter1 = "CY2016Q1",
+  calendar_quarter2 = "CY2018Q3",
+  calendar_quarter3 = "CY2019Q2",
+  artattend = FALSE,
+  spectrum_population_calibration = "none")
+
+a_naomi_data <- naomi::select_naomi_data(
+  a_naomi_mf,
+  mwi_survey_hiv_indicators,
+  mwi_anc_testing,
+  mwi_art_number,
+  prev_survey_ids = c("MWI2016PHIA", "MWI2015DHS"),
+  artcov_survey_ids = "MWI2016PHIA",
+  recent_survey_ids = "MWI2016PHIA")
+
+
+a_tmb_inputs <- naomi::prepare_tmb_inputs(a_naomi_data)
