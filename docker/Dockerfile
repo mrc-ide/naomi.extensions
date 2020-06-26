@@ -3,7 +3,10 @@ FROM mrcide/naomi-base:latest
 COPY docker/bin /usr/local/bin/
 
 RUN install_packages --repo=https://inla.r-inla-download.org/R/stable \
-    INLA
+        INLA
+
+RUN install_remote \
+        mrc-ide/naomi
 
 ARG GIT_SHA='UNKNOWN'
 ARG GIT_BRANCH='UNKNOWN'
